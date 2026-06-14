@@ -9,7 +9,7 @@ object MainForm: TMainForm
   ClientHeight = 661
   ClientWidth = 1060
   LCLVersion = '4.4.0.0'
-  object Panel1: TPanel
+  object LeftPanel: TPanel
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Owner
     AnchorSideBottom.Control = Owner
@@ -28,9 +28,9 @@ object MainForm: TMainForm
     ClientWidth = 288
     TabOrder = 0
     object DoughGroupBox: TGroupBox
-      AnchorSideLeft.Control = Panel1
-      AnchorSideTop.Control = Panel1
-      AnchorSideRight.Control = Panel1
+      AnchorSideLeft.Control = LeftPanel
+      AnchorSideTop.Control = LeftPanel
+      AnchorSideRight.Control = LeftPanel
       AnchorSideRight.Side = asrBottom
       Left = 0
       Height = 84
@@ -45,7 +45,7 @@ object MainForm: TMainForm
       Font.Name = 'Noto Sans'
       ParentFont = False
       TabOrder = 1
-      object Label1: TLabel
+      object NumberOfPizzaLabel: TLabel
         AnchorSideLeft.Control = DoughGroupBox
         AnchorSideTop.Control = DoughGroupBox
         Left = 5
@@ -58,8 +58,8 @@ object MainForm: TMainForm
         BorderSpacing.Bottom = 5
         Caption = 'Nombre de pâtons'
       end
-      object Label2: TLabel
-        AnchorSideLeft.Control = SpinEdit1
+      object DoughWeightLabel: TLabel
+        AnchorSideLeft.Control = NumberOfPizzaSpinEdit
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = DoughGroupBox
         Left = 146
@@ -71,9 +71,9 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         Caption = 'Poids d’un pâton (g)'
       end
-      object SpinEdit1: TSpinEdit
+      object NumberOfPizzaSpinEdit: TSpinEdit
         AnchorSideLeft.Control = DoughGroupBox
-        AnchorSideTop.Control = Label1
+        AnchorSideTop.Control = NumberOfPizzaLabel
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 26
@@ -85,10 +85,10 @@ object MainForm: TMainForm
         TabOrder = 0
         Value = 4
       end
-      object SpinEdit2: TSpinEdit
-        AnchorSideLeft.Control = SpinEdit1
+      object DoughWeightSpinEdit: TSpinEdit
+        AnchorSideLeft.Control = NumberOfPizzaSpinEdit
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = SpinEdit1
+        AnchorSideTop.Control = NumberOfPizzaSpinEdit
         AnchorSideRight.Control = DoughGroupBox
         AnchorSideRight.Side = asrBottom
         Left = 146
@@ -104,10 +104,10 @@ object MainForm: TMainForm
       end
     end
     object YeastRadioGroup: TRadioGroup
-      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Control = LeftPanel
       AnchorSideTop.Control = ProportionsGroupBox
       AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Control = LeftPanel
       AnchorSideRight.Side = asrBottom
       Left = 0
       Height = 78
@@ -130,10 +130,10 @@ object MainForm: TMainForm
       ClientWidth = 282
       ColumnLayout = clVerticalThenHorizontal
       TabOrder = 0
-      object leviato: TRadioButton
+      object DryYeastRadioButton: TRadioButton
         AnchorSideLeft.Control = YeastRadioGroup
         AnchorSideTop.Control = YeastRadioGroup
-        AnchorSideRight.Control = leviato1
+        AnchorSideRight.Control = FreshYeastRadioButton
         AnchorSideBottom.Control = YeastRadioGroup
         AnchorSideBottom.Side = asrBottom
         Left = 6
@@ -146,7 +146,7 @@ object MainForm: TMainForm
         Caption = 'Levure séche active'
         TabOrder = 1
       end
-      object leviato1: TRadioButton
+      object FreshYeastRadioButton: TRadioButton
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = YeastRadioGroup
         AnchorSideRight.Control = YeastRadioGroup
@@ -167,10 +167,10 @@ object MainForm: TMainForm
       end
     end
     object ProportionsGroupBox: TGroupBox
-      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Control = LeftPanel
       AnchorSideTop.Control = DoughGroupBox
       AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Control = LeftPanel
       AnchorSideRight.Side = asrBottom
       Left = 0
       Height = 84
@@ -183,7 +183,7 @@ object MainForm: TMainForm
       ClientHeight = 58
       ClientWidth = 282
       TabOrder = 2
-      object Label3: TLabel
+      object WaterLabel: TLabel
         AnchorSideLeft.Control = ProportionsGroupBox
         AnchorSideTop.Control = ProportionsGroupBox
         Left = 5
@@ -196,8 +196,8 @@ object MainForm: TMainForm
         BorderSpacing.Bottom = 5
         Caption = 'Eau'
       end
-      object Label4: TLabel
-        AnchorSideLeft.Control = SpinEdit3
+      object SaltLabel: TLabel
+        AnchorSideLeft.Control = WaterSpinEdit
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = ProportionsGroupBox
         Left = 146
@@ -209,9 +209,9 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         Caption = 'Sel'
       end
-      object SpinEdit3: TSpinEdit
+      object WaterSpinEdit: TSpinEdit
         AnchorSideLeft.Control = ProportionsGroupBox
-        AnchorSideTop.Control = Label3
+        AnchorSideTop.Control = WaterLabel
         AnchorSideTop.Side = asrBottom
         Left = 5
         Height = 26
@@ -222,12 +222,12 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
         TabOrder = 0
-        Value = 180
+        Value = 70
       end
-      object SpinEdit4: TSpinEdit
-        AnchorSideLeft.Control = SpinEdit3
+      object SaltSpinEdit: TSpinEdit
+        AnchorSideLeft.Control = WaterSpinEdit
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = SpinEdit3
+        AnchorSideTop.Control = WaterSpinEdit
         AnchorSideRight.Control = ProportionsGroupBox
         AnchorSideRight.Side = asrBottom
         Left = 146
@@ -243,10 +243,10 @@ object MainForm: TMainForm
       end
     end
     object FermentationGroupBox: TGroupBox
-      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Control = LeftPanel
       AnchorSideTop.Control = YeastRadioGroup
       AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Control = LeftPanel
       AnchorSideRight.Side = asrBottom
       Left = 0
       Height = 84
@@ -260,7 +260,7 @@ object MainForm: TMainForm
       ClientHeight = 58
       ClientWidth = 282
       TabOrder = 3
-      object Label5: TLabel
+      object FermentationDurationLabel: TLabel
         AnchorSideLeft.Control = FermentationGroupBox
         AnchorSideTop.Control = FermentationGroupBox
         Left = 5
@@ -271,8 +271,8 @@ object MainForm: TMainForm
         BorderSpacing.Top = 5
         Caption = 'Durée (h)'
       end
-      object Label6: TLabel
-        AnchorSideLeft.Control = SpinEdit5
+      object TemperatureLabel: TLabel
+        AnchorSideLeft.Control = FermentationDurationSpinEdit
         AnchorSideLeft.Side = asrBottom
         AnchorSideTop.Control = FermentationGroupBox
         Left = 146
@@ -284,9 +284,9 @@ object MainForm: TMainForm
         BorderSpacing.Right = 5
         Caption = 'Température ambiante'
       end
-      object SpinEdit5: TSpinEdit
+      object FermentationDurationSpinEdit: TSpinEdit
         AnchorSideLeft.Control = FermentationGroupBox
-        AnchorSideTop.Control = Label5
+        AnchorSideTop.Control = FermentationDurationLabel
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Control = FermentationGroupBox
         AnchorSideBottom.Side = asrBottom
@@ -301,10 +301,10 @@ object MainForm: TMainForm
         TabOrder = 0
         Value = 4
       end
-      object SpinEdit6: TSpinEdit
-        AnchorSideLeft.Control = SpinEdit5
+      object TemperatureSpinEdit: TSpinEdit
+        AnchorSideLeft.Control = FermentationDurationSpinEdit
         AnchorSideLeft.Side = asrBottom
-        AnchorSideTop.Control = Label6
+        AnchorSideTop.Control = TemperatureLabel
         AnchorSideTop.Side = asrBottom
         AnchorSideBottom.Control = FermentationGroupBox
         AnchorSideBottom.Side = asrBottom
@@ -321,12 +321,12 @@ object MainForm: TMainForm
       end
     end
     object CalculateButton: TBitBtn
-      AnchorSideLeft.Control = Panel1
+      AnchorSideLeft.Control = LeftPanel
       AnchorSideTop.Control = FermentationGroupBox
       AnchorSideTop.Side = asrBottom
-      AnchorSideRight.Control = Panel1
+      AnchorSideRight.Control = LeftPanel
       AnchorSideRight.Side = asrBottom
-      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Control = LeftPanel
       AnchorSideBottom.Side = asrBottom
       Left = 0
       Height = 271
@@ -340,7 +340,7 @@ object MainForm: TMainForm
     end
   end
   object GroupBox1: TGroupBox
-    AnchorSideLeft.Control = Panel1
+    AnchorSideLeft.Control = LeftPanel
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = Owner
     AnchorSideRight.Control = Owner
@@ -368,20 +368,19 @@ object MainForm: TMainForm
       Left = 20
       Height = 78
       Top = 20
-      Width = 70
-      AutoSize = True
+      Width = 200
       BorderSpacing.Left = 20
       BorderSpacing.Top = 20
       Caption = 'Farine'
       ClientHeight = 52
-      ClientWidth = 64
+      ClientWidth = 194
       TabOrder = 0
-      object Label7: TLabel
+      object FlourResultLabel: TLabel
         AnchorSideLeft.Control = GroupBox2
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = GroupBox2
         AnchorSideTop.Side = asrCenter
-        Left = 12
+        Left = 77
         Height = 37
         Top = 8
         Width = 40
@@ -396,25 +395,24 @@ object MainForm: TMainForm
       AnchorSideTop.Control = GroupBox1
       AnchorSideRight.Control = GroupBox1
       AnchorSideRight.Side = asrBottom
-      Left = 110
+      Left = 240
       Height = 78
       Top = 20
-      Width = 606
+      Width = 476
       Anchors = [akTop, akLeft, akRight]
-      AutoSize = True
       BorderSpacing.Left = 20
       BorderSpacing.Top = 20
       BorderSpacing.Right = 20
       Caption = 'Eau'
       ClientHeight = 52
-      ClientWidth = 600
+      ClientWidth = 470
       TabOrder = 1
-      object Label8: TLabel
+      object WaterResultLabel: TLabel
         AnchorSideLeft.Control = GroupBox3
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = GroupBox3
         AnchorSideTop.Side = asrCenter
-        Left = 280
+        Left = 215
         Height = 37
         Top = 8
         Width = 40
@@ -432,22 +430,21 @@ object MainForm: TMainForm
       Left = 20
       Height = 477
       Top = 118
-      Width = 51
+      Width = 200
       Anchors = [akTop, akLeft, akBottom]
-      AutoSize = True
       BorderSpacing.Left = 20
       BorderSpacing.Top = 20
       BorderSpacing.Bottom = 20
       Caption = 'Sel'
       ClientHeight = 451
-      ClientWidth = 45
+      ClientWidth = 194
       TabOrder = 2
-      object Label9: TLabel
+      object SaltResultLabel: TLabel
         AnchorSideLeft.Control = GroupBox4
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = GroupBox4
         AnchorSideTop.Side = asrCenter
-        Left = 2
+        Left = 77
         Height = 37
         Top = 207
         Width = 40
@@ -464,25 +461,24 @@ object MainForm: TMainForm
       AnchorSideRight.Side = asrBottom
       AnchorSideBottom.Control = GroupBox1
       AnchorSideBottom.Side = asrBottom
-      Left = 110
+      Left = 240
       Height = 477
       Top = 118
-      Width = 606
+      Width = 476
       Anchors = [akTop, akLeft, akRight, akBottom]
-      AutoSize = True
       BorderSpacing.Top = 20
       BorderSpacing.Right = 20
       BorderSpacing.Bottom = 20
       Caption = 'Levure'
       ClientHeight = 451
-      ClientWidth = 600
+      ClientWidth = 470
       TabOrder = 3
-      object Label10: TLabel
+      object YeastResultLabel: TLabel
         AnchorSideLeft.Control = GroupBox5
         AnchorSideLeft.Side = asrCenter
         AnchorSideTop.Control = GroupBox5
         AnchorSideTop.Side = asrCenter
-        Left = 280
+        Left = 215
         Height = 37
         Top = 207
         Width = 40
