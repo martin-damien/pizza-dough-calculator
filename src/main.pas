@@ -82,58 +82,58 @@ var
 
 implementation
 
-    {$R *.lfm}
+{$R *.lfm}
 
-    { TMainForm }
+{ TMainForm }
 
-    procedure TMainForm.onInputChange(Sender: TObject);
-    var
-        inputIngredients: TInputIngredients;
-        outputIngredients: TOutputIngredients;
-    begin
-        inputIngredients := FormToInput;
-        outputIngredients := CalculateQuantities(inputIngredients);
-        outputToForm(outputIngredients);
+procedure TMainForm.onInputChange(Sender: TObject);
+var
+    inputIngredients: TInputIngredients;
+    outputIngredients: TOutputIngredients;
+begin
+    inputIngredients := FormToInput;
+    outputIngredients := CalculateQuantities(inputIngredients);
+    outputToForm(outputIngredients);
+end;
+
+procedure TMainForm.AboutMenuItemClick(Sender: TObject);
+var
+    aboutForm: TAboutForm;
+begin
+    aboutForm := TAboutForm.Create(self);
+    try
+      aboutForm.ShowModal;
+    finally
+      aboutForm.Free;
     end;
+end;
 
-    procedure TMainForm.AboutMenuItemClick(Sender: TObject);
-    var
-        aboutForm: TAboutForm;
-    begin
-        aboutForm := TAboutForm.Create(self);
-        try
-          aboutForm.ShowModal;
-        finally
-          aboutForm.Free;
-        end;
-    end;
+function TMainForm.FormToInput: TInputIngredients;
+var
+    input: TInputIngredients;
+begin
+    input.dough := NumberOfPizzaSpinEdit.value;
+    input.weight := DoughWeightSpinEdit.Value;
+    input.hydration := WaterSpinEdit.Value;
+    input.salt := SaltSpinEdit.Value;
+    input.fermentationDuration := FermentationDurationSpinEdit.Value;
+    input.fermentationTemperature := TemperatureSpinEdit.Value;
 
-    function TMainForm.FormToInput: TInputIngredients;
-    var
-        input: TInputIngredients;
-    begin
-        input.dough := NumberOfPizzaSpinEdit.value;
-        input.weight := DoughWeightSpinEdit.Value;
-        input.hydration := WaterSpinEdit.Value;
-        input.salt := SaltSpinEdit.Value;
-        input.fermentationDuration := FermentationDurationSpinEdit.Value;
-        input.fermentationTemperature := TemperatureSpinEdit.Value;
+    if DryYeastRadioButton.Checked then
+       input.yeastType := ActiveDryYeast;
+    if FreshYeastRadioButton.Checked then
+       input.yeastType := FreshYeast;
 
-        if DryYeastRadioButton.Checked then
-           input.yeastType := ActiveDryYeast;
-        if FreshYeastRadioButton.Checked then
-           input.yeastType := FreshYeast;
+    Result := input;
+end;
 
-        Result := input;
-    end;
-
-    procedure TMainForm.outputToForm(outputIngredients: TOutputIngredients);
-    begin
-        FlourResultLabel.Caption := FormatFloat('0', outputIngredients.flour) + ' g';
-        WaterResultLabel.Caption := FormatFloat('0', outputIngredients.water) + ' g';
-        SaltResultLabel.Caption := FormatFloat('0.0', outputIngredients.salt) + ' g';
-        YeastResultLabel.Caption := FormatFloat('0.00', outputIngredients.yeast) + ' g';
-    end;
+procedure TMainForm.outputToForm(outputIngredients: TOutputIngredients);
+begin
+    FlourResultLabel.Caption := FormatFloat('0', outputIngredients.flour) + ' g';
+    WaterResultLabel.Caption := FormatFloat('0', outputIngredients.water) + ' g';
+    SaltResultLabel.Caption := FormatFloat('0.0', outputIngredients.salt) + ' g';
+    YeastResultLabel.Caption := FormatFloat('0.00', outputIngredients.yeast) + ' g';
+end;
 
 end.
 

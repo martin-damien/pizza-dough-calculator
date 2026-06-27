@@ -55,6 +55,7 @@ type
 function CalculateQuantities(inputIngredients: TInputIngredients): TOutputIngredients;
 function CalculateYeast(Flour, hydration, salt, temperature, duration: Double): Double;
 function ApplyYeastAdjustmentForFermentationDuration(yeast, FermentationDuration: Double): Double;
+function AdjustYeastByType(yeast: Double; askedType: TYeastType): Double;
 
 implementation
 
@@ -78,6 +79,7 @@ begin
         inputIngredients.fermentationTemperature,
         inputIngredients.fermentationDuration
     );
+    outputIngredients.yeast := AdjustYeastByType(outputIngredients.yeast, inputIngredients.yeastType);
 
     Result := outputIngredients;
 end;
@@ -113,6 +115,14 @@ begin
          Result := yeast * 1.8
     else
         Result := yeast * 2.2;
+end;
+
+function AdjustYeastByType(yeast: Double; askedType: TYeastType): Double;
+begin
+    Result := yeast;
+
+    if askedType = ActiveDryYeast then
+        Result := Result * 0.4;
 end;
 
 end.
