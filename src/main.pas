@@ -27,24 +27,23 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Spin, Menus, Buttons, Yeast, about;
+    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+    Spin, Menus, Buttons, LCLTranslator, DefaultTranslator, Yeast, about;
 
 type
 
     { TMainForm }
 
     TMainForm = class(TForm)
-        CalculateButton: TBitBtn;
         DoughGroupBox: TGroupBox;
-        MainMenu1: TMainMenu;
-        MenuItem1: TMenuItem;
+        MainMenu: TMainMenu;
+        HelpMenuItem: TMenuItem;
         AboutMenuItem: TMenuItem;
         QuantitiesGroupBox: TGroupBox;
-        GroupBox2: TGroupBox;
-        GroupBox3: TGroupBox;
-        GroupBox4: TGroupBox;
-        GroupBox5: TGroupBox;
+        FlourGroupBox: TGroupBox;
+        WaterGroupBox: TGroupBox;
+        SaltGroupBox: TGroupBox;
+        YeastGroupBox: TGroupBox;
         Quantities_SaltYeast_Panel: TPanel;
         Quantities_FloorWater_Panel: TPanel;
         YeastResultLabel: TLabel;

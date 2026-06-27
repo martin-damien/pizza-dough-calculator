@@ -3,12 +3,13 @@ object AboutForm: TAboutForm
   Height = 193
   Top = 250
   Width = 538
-  Caption = 'À propos…'
+  BorderStyle = bsSingle
+  Caption = 'About'
   ClientHeight = 193
   ClientWidth = 538
   Position = poMainFormCenter
   LCLVersion = '4.8.0.0'
-  object Image1: TImage
+  object LogoImage: TImage
     Left = 8
     Height = 178
     Top = 8
@@ -2348,7 +2349,7 @@ object AboutForm: TAboutForm
       0512131DA6AC0000000049454E44AE426082
     }
   end
-  object Label1: TLabel
+  object ApplicationTitleLabel: TLabel
     Left = 192
     Height = 41
     Top = 8
@@ -2358,11 +2359,13 @@ object AboutForm: TAboutForm
     Font.Name = 'Sans'
     ParentFont = False
   end
-  object Label2: TLabel
+  object RepositoryURLLabel: TLabel
+    Cursor = crHandPoint
     Left = 192
     Height = 17
     Top = 56
     Width = 319
     Caption = 'https://github.com/martin-damien/pizza-dough-calculator'
+    OnClick = RepositoryURLLabelClick
   end
 end

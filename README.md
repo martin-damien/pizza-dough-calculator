@@ -1,7 +1,8 @@
 <p align="center">
-	<img src="assets/icon.png" alt="Logo">
-	<h1>Pizza Dough Calculator</h1>
+    <img src="assets/icon.png" alt="Logo">
 </p>
+
+# Pizza Dough Calculator
 
 A simple desktop application to calculate pizza dough ingredients, built with Lazarus (FreePascal).
 

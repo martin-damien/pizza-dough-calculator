@@ -1,0 +1,124 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: taboutform.applicationtitlelabel.caption
+msgctxt "taboutform.applicationtitlelabel.caption"
+msgid "Pizza Dough Calculator"
+msgstr ""
+
+#: taboutform.caption
+msgid "About"
+msgstr ""
+
+#: taboutform.repositoryurllabel.caption
+msgid "https://github.com/martin-damien/pizza-dough-calculator"
+msgstr ""
+
+#: tmainform.aboutmenuitem.caption
+msgid "About…"
+msgstr ""
+
+#: tmainform.caption
+msgctxt "tmainform.caption"
+msgid "Pizza Dough Calculator"
+msgstr ""
+
+#: tmainform.doughgroupbox.caption
+msgid "Dough balls"
+msgstr ""
+
+#: tmainform.doughweightlabel.caption
+msgid "Weight (g)"
+msgstr ""
+
+#: tmainform.dryyeastradiobutton.caption
+msgid "Dry / Active"
+msgstr ""
+
+#: tmainform.fermentationdurationlabel.caption
+msgid "Duration (h)"
+msgstr ""
+
+#: tmainform.fermentationgroupbox.caption
+msgid "Fermentation"
+msgstr ""
+
+#: tmainform.flourgroupbox.caption
+msgctxt "tmainform.flourgroupbox.caption"
+msgid "Floor"
+msgstr ""
+
+#: tmainform.flourresultlabel.caption
+msgctxt "tmainform.flourresultlabel.caption"
+msgid "0 g"
+msgstr ""
+
+#: tmainform.freshyeastradiobutton.caption
+msgid "Fresh"
+msgstr ""
+
+#: tmainform.helpmenuitem.caption
+msgctxt "tmainform.helpmenuitem.caption"
+msgid "?"
+msgstr ""
+
+#: tmainform.numberofpizzalabel.caption
+msgid "Quantity"
+msgstr ""
+
+#: tmainform.proportionsgroupbox.caption
+msgid "Proportions (%)"
+msgstr ""
+
+#: tmainform.quantitiesgroupbox.caption
+msgid "Quantities"
+msgstr ""
+
+#: tmainform.saltgroupbox.caption
+msgctxt "tmainform.saltgroupbox.caption"
+msgid "Salt"
+msgstr ""
+
+#: tmainform.saltlabel.caption
+msgctxt "tmainform.saltlabel.caption"
+msgid "Salt"
+msgstr ""
+
+#: tmainform.saltresultlabel.caption
+msgctxt "tmainform.saltresultlabel.caption"
+msgid "0 g"
+msgstr ""
+
+#: tmainform.temperaturelabel.caption
+msgid "Temperature"
+msgstr ""
+
+#: tmainform.watergroupbox.caption
+msgctxt "tmainform.watergroupbox.caption"
+msgid "Water"
+msgstr ""
+
+#: tmainform.waterlabel.caption
+msgctxt "tmainform.waterlabel.caption"
+msgid "Water"
+msgstr ""
+
+#: tmainform.waterresultlabel.caption
+msgctxt "tmainform.waterresultlabel.caption"
+msgid "0 g"
+msgstr ""
+
+#: tmainform.yeastgroupbox.caption
+msgctxt "tmainform.yeastgroupbox.caption"
+msgid "Yeast"
+msgstr ""
+
+#: tmainform.yeastradiogroup.caption
+msgid "Type of yeast"
+msgstr ""
+
+#: tmainform.yeastresultlabel.caption
+msgctxt "tmainform.yeastresultlabel.caption"
+msgid "0 g"
+msgstr ""
+
