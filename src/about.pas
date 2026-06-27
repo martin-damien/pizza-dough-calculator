@@ -13,8 +13,8 @@ type
     { TAboutForm }
 
     TAboutForm = class(TForm)
-        Image1: TImage;
-        Label1: TLabel;
+        LogoImage: TImage;
+        ApplicationTitleLabel: TLabel;
         RepositoryURLLabel: TLabel;
         procedure Button1Click(Sender: TObject);
         procedure RepositoryURLLabelClick(Sender: TObject);
