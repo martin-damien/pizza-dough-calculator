@@ -27,8 +27,11 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-  Spin, Menus, Buttons, Yeast, about;
+    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+    Spin, Menus, Buttons, LCLTranslator, Yeast, about;
+
+resourcestring
+  Caption1 = 'Some text';
 
 type
 

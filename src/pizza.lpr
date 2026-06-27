@@ -38,6 +38,7 @@ uses
 
 begin
     RequireDerivedFormResource:=True;
+    Application.Title:='Pizza Dough Calculator';
     Application.Scaled:=True;
     {$PUSH}{$WARN 5044 OFF}
     Application.MainFormOnTaskbar:=True;

@@ -5,7 +5,8 @@ unit about;
 interface
 
 uses
-    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls;
+    Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
+    LCLIntf, LCLTranslator;
 
 type
 
@@ -14,8 +15,9 @@ type
     TAboutForm = class(TForm)
         Image1: TImage;
         Label1: TLabel;
-        Label2: TLabel;
+        RepositoryURLLabel: TLabel;
         procedure Button1Click(Sender: TObject);
+        procedure RepositoryURLLabelClick(Sender: TObject);
     private
 
     public
@@ -34,6 +36,11 @@ implementation
 procedure TAboutForm.Button1Click(Sender: TObject);
 begin
     self.Free;
+end;
+
+procedure TAboutForm.RepositoryURLLabelClick(Sender: TObject);
+begin
+    OpenURL(RepositoryURLLabel.Caption);
 end;
 
 end.

@@ -1,13 +1,14 @@
 object MainForm: TMainForm
   Left = 342
-  Height = 437
+  Height = 442
   Top = 250
   Width = 786
   BorderStyle = bsSingle
   Caption = 'Pizza Dough Calculator'
-  ClientHeight = 437
+  ClientHeight = 442
   ClientWidth = 786
   Menu = MainMenu1
+  Position = poDesktopCenter
   LCLVersion = '4.8.0.0'
   object LeftPanel: TPanel
     AnchorSideLeft.Control = Owner
@@ -15,7 +16,7 @@ object MainForm: TMainForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 10
-    Height = 417
+    Height = 422
     Top = 10
     Width = 286
     Anchors = [akTop, akLeft, akBottom]
@@ -24,7 +25,7 @@ object MainForm: TMainForm
     BorderSpacing.Top = 10
     BorderSpacing.Bottom = 10
     BevelOuter = bvNone
-    ClientHeight = 417
+    ClientHeight = 422
     ClientWidth = 286
     TabOrder = 0
     object DoughGroupBox: TGroupBox
@@ -38,7 +39,7 @@ object MainForm: TMainForm
       Width = 286
       Anchors = [akTop, akLeft, akRight]
       AutoSize = True
-      Caption = 'Pâtons'
+      Caption = 'Dough balls'
       ClientHeight = 59
       ClientWidth = 282
       Font.Height = -12
@@ -51,12 +52,12 @@ object MainForm: TMainForm
         Left = 5
         Height = 17
         Top = 5
-        Width = 104
+        Width = 47
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        Caption = 'Nombre de pâtons'
+        Caption = 'Quantity'
       end
       object DoughWeightLabel: TLabel
         AnchorSideLeft.Control = NumberOfPizzaSpinEdit
@@ -65,11 +66,11 @@ object MainForm: TMainForm
         Left = 146
         Height = 17
         Top = 5
-        Width = 109
+        Width = 57
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
-        Caption = 'Poids d’un pâton (g)'
+        Caption = 'Weight (g)'
       end
       object NumberOfPizzaSpinEdit: TSpinEdit
         AnchorSideLeft.Control = DoughGroupBox
@@ -120,7 +121,7 @@ object MainForm: TMainForm
       AutoSize = True
       BorderSpacing.Top = 10
       BorderSpacing.Bottom = 10
-      Caption = 'Type de levure'
+      Caption = 'Type of yeast'
       ChildSizing.LeftRightSpacing = 6
       ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
       ChildSizing.EnlargeVertical = crsHomogenousChildResize
@@ -141,13 +142,13 @@ object MainForm: TMainForm
         Left = 10
         Height = 21
         Top = 10
-        Width = 133
+        Width = 87
         Anchors = [akTop, akLeft, akBottom]
         BorderSpacing.Left = 10
         BorderSpacing.Top = 10
         BorderSpacing.Right = 10
         BorderSpacing.Bottom = 10
-        Caption = 'Levure séche active'
+        Caption = 'Dry / Active'
         TabOrder = 1
         OnChange = onInputChange
       end
@@ -159,16 +160,16 @@ object MainForm: TMainForm
         AnchorSideRight.Side = asrBottom
         AnchorSideBottom.Control = YeastRadioGroup
         AnchorSideBottom.Side = asrBottom
-        Left = 153
+        Left = 107
         Height = 21
         Top = 10
-        Width = 119
+        Width = 165
         Anchors = [akTop, akLeft, akRight, akBottom]
         BorderSpacing.Left = 10
         BorderSpacing.Top = 10
         BorderSpacing.Right = 10
         BorderSpacing.Bottom = 10
-        Caption = 'Levure fraiche'
+        Caption = 'Fresh'
         Checked = True
         TabOrder = 0
         TabStop = True
@@ -198,12 +199,12 @@ object MainForm: TMainForm
         Left = 5
         Height = 17
         Top = 5
-        Width = 21
+        Width = 34
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
         BorderSpacing.Bottom = 5
-        Caption = 'Eau'
+        Caption = 'Water'
       end
       object SaltLabel: TLabel
         AnchorSideLeft.Control = WaterSpinEdit
@@ -212,11 +213,11 @@ object MainForm: TMainForm
         Left = 146
         Height = 17
         Top = 5
-        Width = 17
+        Width = 21
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
-        Caption = 'Sel'
+        Caption = 'Salt'
       end
       object WaterSpinEdit: TSpinEdit
         AnchorSideLeft.Control = ProportionsGroupBox
@@ -277,10 +278,10 @@ object MainForm: TMainForm
         Left = 5
         Height = 17
         Top = 5
-        Width = 53
+        Width = 67
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
-        Caption = 'Durée (h)'
+        Caption = 'Duration (h)'
       end
       object TemperatureLabel: TLabel
         AnchorSideLeft.Control = FermentationDurationSpinEdit
@@ -289,11 +290,11 @@ object MainForm: TMainForm
         Left = 146
         Height = 17
         Top = 5
-        Width = 129
+        Width = 73
         BorderSpacing.Left = 5
         BorderSpacing.Top = 5
         BorderSpacing.Right = 5
-        Caption = 'Température ambiante'
+        Caption = 'Temperature'
       end
       object FermentationDurationSpinEdit: TSpinEdit
         AnchorSideLeft.Control = FermentationGroupBox
@@ -342,12 +343,12 @@ object MainForm: TMainForm
       AnchorSideBottom.Control = LeftPanel
       AnchorSideBottom.Side = asrBottom
       Left = 0
-      Height = 83
+      Height = 88
       Top = 334
       Width = 286
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderSpacing.Top = 10
-      Caption = 'Calculer'
+      Caption = 'Calculate'
       TabOrder = 4
       OnClick = onInputChange
       OnEnter = onInputChange
@@ -370,7 +371,7 @@ object MainForm: TMainForm
     BorderSpacing.Top = 10
     BorderSpacing.Right = 10
     BorderSpacing.Bottom = 10
-    Caption = 'Quantités'
+    Caption = 'Quantities'
     ClientHeight = 398
     ClientWidth = 466
     ParentBidiMode = False
@@ -393,7 +394,7 @@ object MainForm: TMainForm
         Align = alLeft
         BorderSpacing.Left = 20
         BorderSpacing.Top = 20
-        Caption = 'Farine'
+        Caption = 'Floor'
         ClientHeight = 141
         ClientWidth = 196
         TabOrder = 0
@@ -420,7 +421,7 @@ object MainForm: TMainForm
         BorderSpacing.Left = 20
         BorderSpacing.Top = 20
         BorderSpacing.Right = 20
-        Caption = 'Eau'
+        Caption = 'Water'
         ClientHeight = 141
         ClientWidth = 202
         TabOrder = 1
@@ -460,7 +461,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 20
         BorderSpacing.Right = 20
         BorderSpacing.Bottom = 20
-        Caption = 'Sel'
+        Caption = 'Salt'
         ClientHeight = 159
         ClientWidth = 196
         TabOrder = 0
@@ -488,7 +489,7 @@ object MainForm: TMainForm
         BorderSpacing.Top = 20
         BorderSpacing.Right = 20
         BorderSpacing.Bottom = 20
-        Caption = 'Levure'
+        Caption = 'Yeast'
         ClientHeight = 159
         ClientWidth = 202
         TabOrder = 1
@@ -509,12 +510,12 @@ object MainForm: TMainForm
     end
   end
   object MainMenu1: TMainMenu
-    Left = 752
-    Top = 6
+    Left = 744
+    Top = 8
     object MenuItem1: TMenuItem
       Caption = '?'
       object AboutMenuItem: TMenuItem
-        Caption = 'À propos'
+        Caption = 'About…'
         OnClick = AboutMenuItemClick
       end
     end
