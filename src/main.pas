@@ -28,7 +28,7 @@ interface
 
 uses
     Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
-    Spin, Menus, Buttons, LCLTranslator, DefaultTranslator, Yeast, about;
+    Spin, Menus, Buttons, LCLTranslator, DefaultTranslator, pdc, about;
 
 type
 

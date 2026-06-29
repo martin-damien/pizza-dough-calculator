@@ -38,6 +38,7 @@ uses
 const
     YEAST_CALIBRATION_COEFFICIENT = 2250;
     HYDRATION_QUADRATIC_COEFFICIENT = 0.0305;
+    FRESH_TO_ACTIVE_DRY_YEAST_COEFFICIENT = 0.4;
 
 type
     TYeastType = (FreshYeast, ActiveDryYeast);
@@ -122,7 +123,7 @@ begin
     Result := yeast;
 
     if askedType = ActiveDryYeast then
-        Result := Result * 0.4;
+        Result := Result * FRESH_TO_ACTIVE_DRY_YEAST_COEFFICIENT;
 end;
 
 end.
