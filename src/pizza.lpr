@@ -32,7 +32,7 @@ uses
     athreads,
     {$ENDIF}
     Interfaces, // this includes the LCL widgetset
-    Forms, main, yeast, about;
+    Forms, fpcunitconsolerunner, main, pdc, about;
 
 {$R *.res}
 
